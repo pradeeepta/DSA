@@ -1,9 +1,9 @@
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
         Set<List<Integer>> result = new HashSet<>();
-        Arrays.sort(nums);
+        //Arrays.sort(nums);
 
-        for (int i = 0; i < nums.length; i++){
+        for (int i = 0; i < nums.length - 2; i++){
             Set<Integer> checker = new HashSet<>();
             for (int j = i + 1; j < nums.length; j++){
                 int sum = -nums[i] - nums[j];
@@ -18,6 +18,6 @@ class Solution {
 
             }
         }
-        return new ArrayList<>(result);
+        return new LinkedList<>(result);
     }
 }
